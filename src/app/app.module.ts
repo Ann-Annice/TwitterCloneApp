@@ -5,7 +5,11 @@ import { from } from 'rxjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule,Routes} from '@angular/router';
+import { SigninComponent } from './signin/signin.component';
 const appRoutes:Routes=[
+  {
+    path:"",component:SigninComponent
+  }
 
 ]
 
@@ -14,7 +18,8 @@ const appRoutes:Routes=[
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
