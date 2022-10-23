@@ -6,9 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule,Routes} from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 const appRoutes:Routes=[
   {
     path:"",component:SigninComponent
+  },
+  {
+    path:"signup",component:SignupComponent
   }
 
 ]
@@ -19,12 +24,14 @@ const appRoutes:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   RouterModule.forRoot(appRoutes)
+   RouterModule.forRoot(appRoutes),
+   FormsModule
     
   ],
   providers: [],
